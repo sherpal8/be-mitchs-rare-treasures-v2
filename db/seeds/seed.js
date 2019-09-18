@@ -1,5 +1,6 @@
-const { ownerData, shopData, treasureData } = require("../data/test-data");
+// const { ownerData, shopData, treasureData } = require("../data/test-data");
 // const { ownerData, shopData, treasureData } = require("../data/dev-data"); // data to seed dev-db
+const { ownerData, shopData, treasureData } = require("../data/index");
 
 const {
   createRef,

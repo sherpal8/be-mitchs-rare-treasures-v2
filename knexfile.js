@@ -1,3 +1,7 @@
+const {
+  personalDataObj: { username, password }
+} = require("./config.js");
+
 // Update with your config settings.
 const ENV = process.env.NODE_ENV || "development";
 
@@ -6,8 +10,8 @@ const dbConfig = {
     client: "pg",
     connection: {
       database: "mitchs_rare_treasures"
-      //   username: "natasafi",
-      //   password: "thisismynewpassword19921118"
+      //   username,
+      //   password
     },
     seeds: {
       directory: "./db/seeds"
@@ -17,8 +21,8 @@ const dbConfig = {
     client: "pg",
     connection: {
       database: "mitchs_rare_treasures_test"
-      //   username: "natasafi",
-      //   password: "thisismynewpassword19921118"
+      //   username,
+      //   password
     },
     seeds: {
       directory: "./db/seeds"

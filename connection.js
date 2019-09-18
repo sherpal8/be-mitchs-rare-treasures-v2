@@ -9,4 +9,4 @@ const dbConfig =
 
 const connection = knex(dbConfig);
 
-module.eports = connection;
+module.exports = connection;
