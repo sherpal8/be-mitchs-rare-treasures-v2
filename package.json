@@ -4,6 +4,7 @@
   "description": "Mitch has gone into business!",
   "main": "index.js",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "knex": "^0.15.2",
@@ -28,6 +29,7 @@
     "chai": "^4.2.0",
     "chai-sorted": "^0.2.0",
     "mocha": "^6.2.0",
+    "nodemon": "^1.19.2",
     "supertest": "^4.0.2"
   }
 }
