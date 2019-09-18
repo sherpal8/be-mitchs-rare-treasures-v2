@@ -12,13 +12,13 @@
     "pg": "^7.12.1"
   },
   "scripts": {
-    "setup-dev": "psql -f db/dev-setup.sql",
-    "setup-test": "psql -f db/test-setup.sql",
-    "query": "psql -f query.sql > output.txt",
-    "seed-dev": "npm run setup-dev && knex seed:run",
-    "seed-test": "npm run setup-test && NODE_ENV=test knex seed:run && npm run query",
+    "setup-test-db": "psql -f db/test-setup.sql",
+    "setup-dev-db": "psql -f db/dev-setup.sql",
+    "seed-test-db": "npm run setup-test-db && NODE_ENV=test knex seed:run && npm run query",
     "fetch-dev-data": "node ./utils/fetch-dev-data.js",
-    "test": "npm run seed-test && mocha spec",
+    "seed-dev-db": "npm run setup-dev-db && knex seed:run",
+    "query": "psql -f query.sql > output.txt",
+    "test": "npm run seed-test-db && mocha spec",
     "start": "node listen.js"
   },
   "keywords": [],
