@@ -20,7 +20,7 @@
     "seed-dev-db": "npm run setup-dev-db && knex seed:run",
     "query": "psql -f query.sql > output.txt",
     "test": "npm run seed-test-db && mocha spec",
-    "start": "node listen.js"
+    "dev": "nodemon listen.js"
   },
   "keywords": [],
   "author": "",

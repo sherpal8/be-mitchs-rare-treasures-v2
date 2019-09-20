@@ -5,8 +5,8 @@ CREATE DATABASE mitchs_rare_treasures;
 
 CREATE TABLE owners (
   owner_id SERIAL PRIMARY KEY,
-  forename VARCHAR(255),
-  surname VARCHAR(255),
+  forename VARCHAR(255) NOT NULL,
+  surname VARCHAR(255) NOT NULL,
   age INT NOT NULL,
   CHECK (age BETWEEN 16 AND 250)
 );
