@@ -10,5 +10,5 @@ exports.getTreasures = (req, res, next) => {
     .then(treasures => {
       res.status(200).send({ treasures });
     })
-    .catch(err => next(err));
+    .catch(next);
 };

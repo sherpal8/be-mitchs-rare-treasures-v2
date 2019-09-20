@@ -6,5 +6,5 @@ exports.postTreasure = (req, res, next) => {
     .then(insertedTreasure => {
       res.status(201).send({ insertedTreasure });
     })
-    .catch(err => next(err));
+    .catch(next);
 };
