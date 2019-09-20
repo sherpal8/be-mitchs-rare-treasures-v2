@@ -107,6 +107,21 @@ describe("/api", () => {
             });
           });
       });
+      it("if key/ query is not pre-defined acceptable key array, by default the data is returned by sort_by = `cost_at_auction` and order = `asc`", () => {
+        return request
+          .get("/api/treasures?unknownQuery=gaga")
+          .expect(200)
+          .then(({ body: { treasures } }) => {
+            expect(treasures[0]).to.eql({
+              age: 56,
+              colour: "onyx",
+              cost_at_auction: "0.01",
+              shop_name: "shop-e",
+              treasure_id: 4,
+              treasure_name: "treasure-f"
+            });
+          });
+      });
     });
     describe("POST", () => {
       it("201 with POST request", () => {
